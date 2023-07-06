@@ -1,0 +1,44 @@
+body {
+	min-height: 100vh;
+}
+#header {
+	height: 60px;
+	padding-left: 220px;
+}
+.sidebar {
+	min-height: calc(100vh - 60px);
+	position: static;
+	width: 220px;
+}
+.sidebar .active {
+	background-color: rgb(40, 70, 110);
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-content {
+	width: 495px;
+}
+
+.leaflet-container {
+	height: 600px !important;
+}
+#lineChart {
+	width: 100% !important;
+}
+
+@media only screen and (max-width: 500px) {
+	#header {
+		padding-left: 80px;
+	}
+	.modal-content {
+		width: 300px;
+	}
+	.sidebar {
+		position: absolute;
+	}
+	.leaflet-container {
+		height: 400px !important;
+	}
+}
