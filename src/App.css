@@ -23,6 +23,7 @@ body {
 
 .leaflet-container {
 	height: 600px !important;
+	z-index: 2;
 }
 #lineChart {
 	width: 100% !important;
