@@ -4,6 +4,7 @@ import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import "leaflet/dist/leaflet.css";
 import { Chart } from "chart.js/auto";
+import { icon } from "leaflet";
 
 const ChartsMaps = () => {
 	const [casesData, setCasesData] = useState({});
@@ -78,6 +79,11 @@ const ChartsMaps = () => {
 		};
 	}, [casesData]);
 
+	const ICON = icon({
+		iconUrl: "/marker-icon.png",
+		iconSize: [28, 42],
+	});
+
 	return (
 		<div className="w-full">
 			<p className="mt-8 text-center text-2xl font-bold text-gray-700">
@@ -97,6 +103,7 @@ const ChartsMaps = () => {
 					/>
 					{countriesData?.map((country) => (
 						<Marker
+							icon={ICON}
 							position={[
 								country["countryInfo"]["lat"],
 								country["countryInfo"]["long"],
